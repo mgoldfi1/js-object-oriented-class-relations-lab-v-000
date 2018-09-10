@@ -7,18 +7,14 @@ class Driver {
   constructor(name) {
     this.name = name
     this.id = ++driverId
+    this.passengers = []
     store.drivers.push(this)
   }
 
   trips () {
     return store.trips.filter(function(x) {return x.driverId === this.id}.bind(this))
   }
-  passengers () {
-    let pass = []
-    for (const trip of this.trips()) {
-      debugger;
-      pass.push(store.passengers.filter(function(x){return x.id === this.passengerId}.bind(this)))
-    }
+
 
 
 
@@ -44,6 +40,7 @@ class Trip {
     this.id = ++tripId
     this.driverId = driver.id
     this.passengerId = passenger.id
+    driver.passengers.push(passenger)
     store.trips.push(this)
   }
 
