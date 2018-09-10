@@ -14,6 +14,10 @@ class Driver {
     return store.trips.filter(function(x) {return x.driverId === this.id}.bind(this))
   }
   passengers () {
+    for const trip of this.trips {
+      console.log(trip)
+    }
+    )
 
   }
 
