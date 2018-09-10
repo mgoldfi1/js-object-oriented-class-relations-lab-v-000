@@ -15,7 +15,7 @@ class Driver {
   }
   passengers () {
     let pass = []
-    for (const trip of this.trips()) {
+    for (const trip of this.trips()).bind(this) {
       debugger;
       pass.push(store.passengers.filter(function(x){return x.id === this.passengerId}.bind(this)))
     }
