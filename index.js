@@ -18,8 +18,8 @@ class Driver {
     for (const trip of this.trips()) {
       pass.push(store.passengers.filter(function(x){return x.id === this.passengerId debugger; }.bind(this)))
     }
-    
-  
+
+
 
   }
 
