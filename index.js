@@ -33,6 +33,7 @@ class Passenger {
   }
 
   passengers() {
+    debugger;
     return this.trips().map(function(x){return x.passenger})
   }
 }
