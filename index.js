@@ -22,4 +22,8 @@ class Passenger {
   }
 }
 
+class Trip {
 
+
+
+}
