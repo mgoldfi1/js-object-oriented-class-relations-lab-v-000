@@ -30,6 +30,10 @@ class Passenger {
   trips () {
     return store.trips.filter(function(x) {return x.passengerId === this.id}.bind(this))
   }
+  drivers() {
+
+    return this.trips().map(function(x){return x.driver()})
+  }
 
 
 }
