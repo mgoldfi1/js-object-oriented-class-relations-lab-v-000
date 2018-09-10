@@ -17,6 +17,7 @@ class Driver {
     for (const trip of this.trips) {
       console.log(trip)
     }
+    debugger;
     )
 
   }
