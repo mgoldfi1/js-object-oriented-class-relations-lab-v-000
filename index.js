@@ -13,10 +13,9 @@ class Driver {
   trips () {
     return store.trips.filter(function(x) {return x.driverId === this.id}.bind(this))
   }
-  passengers () {
-
-
-
+  passengers() {
+    debugger;
+    return this.trips().map(function(x){return x.passenger})
   }
 
 
@@ -32,10 +31,7 @@ class Passenger {
     return store.trips.filter(function(x) {return x.passengerId === this.id}.bind(this))
   }
 
-  passengers() {
-    debugger;
-    return this.trips().map(function(x){return x.passenger})
-  }
+
 }
 
 class Trip {
