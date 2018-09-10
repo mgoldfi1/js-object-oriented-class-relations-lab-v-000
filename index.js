@@ -14,8 +14,8 @@ class Driver {
     return store.trips.filter(function(x) {return x.driverId === this.id}.bind(this))
   }
   passengers() {
-    debugger;
-    return this.trips().map(function(x){return x.passenger})
+
+    return this.trips().map(function(x){return x.passenger()})
   }
 
 
